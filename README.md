@@ -35,9 +35,22 @@ Pour appliquer ce phènomène, la jauge de contrainte sera peu couteuse. Elle se
 
 Nous avons débuté notre projet par la fabrication de notre shield pour notre chaine de mesures. Ce dernier a été conçu a l'aide du logiciel KICAD  sur la base du amplificateur transimpédance simulation électrique du circuit associé au shield sur le logiciel LTSpice.
 
-Le shield est composé d'un amplificateur transimpédance, d'un module Bluetooth, d'un écran OLED, d'un encodeur rotatoire ainsi que d'une entrée analogique pour le capteur résistif.  
-Pour finir, nous avons effectué l'ensemble des tests du circuit sur le logiciel LTSpice (voir [_Rapport LTSpice_](https://github.com/MOSH-Insa-Toulouse/2022_Franco_Alonso_Projet_capteur/blob/8504636d878c9423babecade3b70e7a892836c6b/Rapport_LTSpice.pdf)).  
-Nous avons ensuite imprimé notre circuit PCB après validation de l'équipe pédagogique.  
-Puis, nous avons utilisé une carte Arduino pour la lecture des mesures et la création des fonctions relatives à l'écran OLED, au module Bluetooth ainsi qu'a l'encodeur rotatoire.  
-Ensuite, avec le site MIT App Inventor, nous avons développé une application Android qui a pour but de recevoir des données via Bluetooth.  
-Et enfin, nous avons réalisé notre propre banc de test : nous avons effectué un test de rayon de courbure et un test de répétabilité avec deux types de crayons (B, HB).  
+![ ](Images_kicad/Schématique_Shield.png)
+    
+Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
+Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
+
+## Matériel nécessaire
+* 1 carte Arduino Uno
+* 2 Résistance de 100kΩ
+* 1 Résistance de 1kΩ
+* 1 Potentiomètre digital MCP-41050
+* 2 Condensateurs 100nF
+* 1 Condensateurs 1µF
+* 1 AOP LTC1050
+* 1 Écran OLED01
+* 1 Module Bluetooth HC-05
+
+Puis, nous avons codé avec l'usage d'une carte Arduino le code permettant la lecture des mesures du capteur ainsi que l'ajout sur le code des fonctions associés aux différentes options ajoutés soit l'écran OLED, le module Bluetooth et le potentiomètre digital.  
+Ensuite, nous avons développé une application Android qui a pour but de recevoir des données via Bluetooth grâce le site MIT App Inventor.  
+Et enfin, nous avons réalisé notre propre banc de test : nous avons effectué un test de rayon de courbure et un test de répétabilité avec deux types de crayons (2B, HB2).  
