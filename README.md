@@ -35,7 +35,7 @@ Pour appliquer ce phènomène, la jauge de contrainte sera peu couteuse. Elle se
 
 Nous avons débuté notre projet par la fabrication de notre shield pour notre chaine de mesures. Ce dernier a été conçu a l'aide du logiciel KICAD  sur la base du amplificateur transimpédance simulation électrique du circuit associé au shield sur le logiciel LTSpice.
 
-![ ](Images_kicad/Schématique_Shield.png)
+![ ](Images_kicad/ampli_transimpédance.png)
     
 Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
 Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
