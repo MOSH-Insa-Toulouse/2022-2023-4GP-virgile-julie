@@ -40,7 +40,7 @@ Nous avons débuté notre projet par la fabrication de notre shield pour notre c
 Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
 Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
 
-## Matériel nécessaire
+Matériel nécessaire
 * 1 carte Arduino Uno
 * 2 Résistance de 100kΩ
 * 1 Résistance de 1kΩ
