@@ -2,8 +2,6 @@
 Projet 4GP du capteur au banc de test en open source hardware
 ---
 ## Sommaire
-- [2022_Franco_Alonso_Projet_capteur](#2022_franco_alonso_projet_capteur)
-  - [Sommaire](#sommaire)
   - [1) Livrables](#1-livrables)
   - [2) Description](#2-description)
   - [3) Shield PCB](#3-shield-pcb)
@@ -30,9 +28,14 @@ Lors de notre projecteur, nous avons décidé de réaliser l'ensemble des option
 ---
 ## 2) Description
 
-Dans le cadre de l'UF MOSH, nous avons conçu un capteur résistif composé de matériaux peu chers : un simple papier et un crayon suffisent à créer ce capteur.
-Ici, le phénomène physique observé est l'effet tunnel. En effet, il existe un lien entre la conduction des électrons et la distance interatomique du réseau percolet. En faisant varier la distance séparant les particules du réseau (en pliant une feuille de papier sur laquelle on aura déposé du graphite par exemple), la conductivité du graphite varie, la résistivité varie également, et donc, la résistance variera aussi en fonction des dimensions du capteur. C'est cette propriété que l'on va exploiter afin de créer notre capteur résistif.  
-Nous avons également implémenté  un shield sur notre chaine de mesures. Ce dernier a été conçu a l'aide du logiciel KICAD et aura un rôle de conditionneur du signal. Le shield est composé d'un amplificateur transimpédance, d'un module Bluetooth, d'un écran OLED, d'un encodeur rotatoire ainsi que d'une entrée analogique pour le capteur résistif.  
+Dans ce projet, nous allons concevoir un capteur résistif fonctionnant sur la base d'un phénomène physique observé qui est l'effet tunnel. En faisant varier la distance séparant les particules du réseau( par des déformations en compression et en tension), la conductivité du graphite varie ainsi que sa résistivité.
+
+Pour appliquer ce phènomène, la jauge de contrainte sera peu couteuse. Elle se présente sous la forme d’un U en papier, sur lequel on vient déposer du graphite à l’aide d’un crayon à papier ceci est très simple à réaliser et sa fabrication ne génère pas d’impact négatif sur l’environnement. A noter aussi que la réponse du capteur va dépendre du type de mine utilisée. 
+
+
+Nous avons débuté notre projet par la fabrication de notre shield pour notre chaine de mesures. Ce dernier a été conçu a l'aide du logiciel KICAD  sur la base du amplificateur transimpédance simulation électrique du circuit associé au shield sur le logiciel LTSpice.
+
+Le shield est composé d'un amplificateur transimpédance, d'un module Bluetooth, d'un écran OLED, d'un encodeur rotatoire ainsi que d'une entrée analogique pour le capteur résistif.  
 Pour finir, nous avons effectué l'ensemble des tests du circuit sur le logiciel LTSpice (voir [_Rapport LTSpice_](https://github.com/MOSH-Insa-Toulouse/2022_Franco_Alonso_Projet_capteur/blob/8504636d878c9423babecade3b70e7a892836c6b/Rapport_LTSpice.pdf)).  
 Nous avons ensuite imprimé notre circuit PCB après validation de l'équipe pédagogique.  
 Puis, nous avons utilisé une carte Arduino pour la lecture des mesures et la création des fonctions relatives à l'écran OLED, au module Bluetooth ainsi qu'a l'encodeur rotatoire.  
