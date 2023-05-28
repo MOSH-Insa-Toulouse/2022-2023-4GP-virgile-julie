@@ -86,3 +86,4 @@ Etapes de fabrication:
 Lorsque le PCB a été fabriqué, il nous reste l'étape d'assemblage du shield. Pour se faire, il nous faut donc percer le PCB et souder les composants.
 Pour ce qui est du perçage, dans les consignes, il était dit de prévoir deux tailles de trous sur le Kicad, soit un de diamètre 0,8mm pour les composants et headers et un de diamètre 1mm pour les broches de connexion de la carte Arduino Uno.
 
+## 4) Arduino
