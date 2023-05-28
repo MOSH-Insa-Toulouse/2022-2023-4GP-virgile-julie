@@ -36,6 +36,7 @@ Pour appliquer ce phènomène, la jauge de contrainte sera peu couteuse. Elle se
 Nous avons débuté notre projet par la fabrication de notre shield pour notre chaine de mesures. Ce dernier a été conçu a l'aide du logiciel KICAD  sur la base du amplificateur transimpédance simulation électrique du circuit associé au shield sur le logiciel LTSpice.
 
 ![ ](Images_kicad/ampli_transimpédance.png)
+### Amplificateur transimpédance sur logiciel LTSpice
     
 Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
 Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
@@ -58,5 +59,12 @@ Et enfin, nous avons réalisé notre propre banc de test : nous avons effectué 
 ---
 ## 3) Shield PCB
 Cette partie se consacre à la réalisation et la fabrication du support éléctronique, soit le PCB de notre projet. Il a été réalisé sur le logiciel Kicad en se basant sur le template d'un arduino uno.
-Pour se faire, nous avons conçu l'ensemble des symboles et empreintes associés aux options choisis précédements. Avec empreintes, nous les avons connecté avec le reste du circuit, en associant les pins et les masses.
+
+Pour se faire, nous avons conçu l'ensemble des symboles et empreintes associés aux options choisis précédements. Avec les empreintes, nous les avons connecté avec le reste du circuit existant, en leurs associant les pins et les masses correspondantes, afin d'obtenir notre shield.
+
+![](Images_kicad/Schématique_Shield.png)
+### Le Shield du support éléctronique
+
+Avec ce shield, nous avons débuté le routage  
+
 
