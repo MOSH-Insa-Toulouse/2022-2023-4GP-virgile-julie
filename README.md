@@ -54,3 +54,9 @@ Matériel nécessaire
 Puis, nous avons codé avec l'usage d'une carte Arduino le code permettant la lecture des mesures du capteur ainsi que l'ajout sur le code des fonctions associés aux différentes options ajoutés soit l'écran OLED, le module Bluetooth et le potentiomètre digital.  
 Ensuite, nous avons développé une application Android qui a pour but de recevoir des données via Bluetooth grâce le site MIT App Inventor.  
 Et enfin, nous avons réalisé notre propre banc de test : nous avons effectué un test de rayon de courbure et un test de répétabilité avec deux types de crayons (2B, HB2).  
+
+---
+## 3) Shield PCB
+Cette partie se consacre à la réalisation et la fabrication du support éléctronique, soit le PCB de notre projet. Il a été réalisé sur le logiciel Kicad en se basant sur le template d'un arduino uno.
+Pour se faire, nous avons conçu l'ensemble des symboles et empreintes associés aux options choisis précédements. Avec empreintes, nous les avons connecté avec le reste du circuit, en associant les pins et les masses.
+
