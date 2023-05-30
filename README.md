@@ -144,7 +144,7 @@ Caractéristique du capteur en tension en fonction d’un pourcentage de déform
 
 ## 7) Datasheet
 
-Vous trouverez le lien vers la datasheet du capteur : 
+Vous trouverez le lien vers la datasheet du capteur : [Datasheet](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/blob/main/Datasheet_capteur/datasheet.pdf)
 
 ## 8) Limites et perspectives
 
