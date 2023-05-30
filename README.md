@@ -7,7 +7,7 @@ Projet 4GP du capteur au banc de test en open source hardware
   - [3) Shield PCB](#3-shield-pcb)
   - [4) Arduino](#4-arduino)
   - [5) Application Android APK](#5-application-android-apk)
-  - [6) Banc de test](#6-banc-de-test)
+  - [6) Banc de test et mesures](#6-banc-de-test-et-mesures)
   - [7) Datasheet](#7-datasheet)
   - [8) limites](#7-limites)
 ---
@@ -97,11 +97,44 @@ Pour ce qui est du perçage, dans les consignes, il était dit de prévoir deux 
 
 ## 4) Arduino
 
-## 6) Banc de test 
+## 5) Application Android APK
+Nous avons développé une application android à l’aide du développeur MIT App Inventor. Couplée au module Bluetooth HC-05, cette application permet d’afficher en direct la résistance du capteur et l’évolution de la résistance en fonction du temps grâce à  un graphique déroulant.
+
+
+![appli_bluetooth](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/a192055e-3689-4256-bf70-24b60545cbc5)
+
+Voici le schéma block de notre application : 
+
+![schéma_block_appli_1](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/490bf1ec-95da-4b09-ba4f-32359234c1b5)
+
+
+![schéma_block_appli_2](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/dc8a4b9c-ade0-4727-9aff-b7befa0f4e2a)
+
+
+Le graphique déroulant permet une analyse qualitative plus que quantitative car le graphique déroulant n’a pas d’échelle en ordonnée. 
+Les limites de cette application sont : 
+-	Si on lance l’application alors que la carte Arduino tournait déjà, il y a une erreur car l’application ne reçoit pas une seule valeur numérique mais plusieurs
+-	Si l’application reçoit la valeur infinie, l’application affiche une erreur 
+
+
+## 6) Banc de test et mesures 
 
 Un banc de test présentant différents arcs de cercle de différents diamètres a été utilisé pour les mesures de caractéristiques électriques. Le but est de mesurer la variation de résistance entre le capteur « à plat » et le capteur courbé sur les arcs de cercle. 
 En désignant r le rayon du cercle et e l’épaisseur du banc de test, on calcule la déformation de chaque arc de cercle à partir de cette formule : ε = e / 2r 
 
 
 ![bancdetest](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/364b97e4-43ff-4bdd-b029-aae2df5c6a04)
+
+Nous avons testé notre capteur avec deux cratons différents : un avec une mine 2B et un avec une mine HB2.
+
+![graph_mine2B](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/68cd9440-5752-4a5c-8961-479224f5fc12)
+ Caractéristique du capteur en tension en fonction d’un pourcentage de déformation pour un crayon 2B
+
+![grpah_mineHB2](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/a3691d29-9dac-4ba0-b7cd-0eb3ac0961b1)
+Caractéristique du capteur en tension en fonction d’un pourcentage de déformation pour un crayon HB2
+
+
+## 7) Datasheet
+
+Vous trouverez le lien vers la datasheet du capteur : 
 
