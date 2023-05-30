@@ -9,7 +9,7 @@ Projet 4GP du capteur au banc de test en open source hardware
   - [5) Application Android APK](#5-application-android-apk)
   - [6) Banc de test et mesures](#6-banc-de-test-et-mesures)
   - [7) Datasheet](#7-datasheet)
-  - [8) limites](#7-limites)
+  - [8) Limites et perspectives](#8-Limites-et-perspectives)
 ---
 ## 1) Livrables
 
@@ -40,9 +40,9 @@ Nous avons débuté notre projet par la fabrication de notre shield pour notre c
     
     
 Pour exploiter le signal de sortie du capteur par un convertisseur analogique-numérique d’une carte Arduino, la sortie du capteur est reliée à un circuit amplificateur transimpédance. Ce circuit dispose de trois étages de filtrage : 
-	Un filtre passe-bas R1C1 qui permet de filtrer les bruits en courants sur le signal d’entrée
-	Un filtre passe bas R3C4 couplé à un amplificateur opérationnel LTC1050 permettant de filtrer la composante du bruit à 50 Hz provenant du réseau électrique
-	Un filtre de sortie R5C2 qui coupe les bruits due à l’échantillonnage de l’ADC
+- Un filtre passe-bas R1C1 qui permet de filtrer les bruits en courants sur le signal d’entrée
+- Un filtre passe bas R3C4 couplé à un amplificateur opérationnel LTC1050 permettant de filtrer la composante du bruit à 50 Hz provenant du réseau électrique
+- Un filtre de sortie R5C2 qui coupe les bruits due à l’échantillonnage de l’ADC
 On retrouve la valeur de résistance du capteur grâce à la formule suivante : 
 R=(1+R3/R2)*R1*Vcc/Vadc-R1-R5
 
@@ -125,16 +125,26 @@ En désignant r le rayon du cercle et e l’épaisseur du banc de test, on calcu
 
 ![bancdetest](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/364b97e4-43ff-4bdd-b029-aae2df5c6a04)
 
-Nous avons testé notre capteur avec deux cratons différents : un avec une mine 2B et un avec une mine HB2.
+
+Nous avons testé notre capteur avec deux crayons différents : un avec une mine 2B et un avec une mine HB2.
 
 ![graph_mine2B](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/68cd9440-5752-4a5c-8961-479224f5fc12)
- Caractéristique du capteur en tension en fonction d’un pourcentage de déformation pour un crayon 2B
+
+Caractéristique du capteur en tension en fonction d’un pourcentage de déformation pour un crayon 2B
 
 ![grpah_mineHB2](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/a3691d29-9dac-4ba0-b7cd-0eb3ac0961b1)
+
 Caractéristique du capteur en tension en fonction d’un pourcentage de déformation pour un crayon HB2
 
 
 ## 7) Datasheet
 
 Vous trouverez le lien vers la datasheet du capteur : 
+
+## 8) Limites et perspectives
+
+La réponse du capteur dépend grandement de la quantité déposée de graphite, ce qui est difficilement mesurable dans le cas du dépot avec une mine de crayon. 
+
+La valeur de la résistance du potentiomète est modifiable seulement au niveau du code : si on veut modifier sa valaeur, il faut modifier le code. On peut imaginer un dispositif qui permet de modifier sa valeur grâce à l'ajout d'un composant au niveau du Hardware, comme par exemple un encodeur rotatif.
+
 
