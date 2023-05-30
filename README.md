@@ -29,7 +29,7 @@ Lors de notre projecteur, nous avons décidé de réaliser l'ensemble des option
 ---
 ## 2) Description
 
-Dans ce projet, nous allons concevoir un capteur résistif fonctionnant sur la base d'un phénomène physique observé qui est l'effet tunnel. En faisant varier la distance séparant les particules du réseau( par des déformations en compression et en tension), la conductivité du graphite varie ainsi que sa résistivité.
+Dans ce projet, nous allons concevoir un capteur résistif fonctionnant sur la base d'un phénomène physique observé qui est l'effet tunnel. En faisant varier la distance séparant les particules du réseau( par des déformations en compression et en tension), on modifie la conductivité du graphite.
 
 Pour appliquer ce phènomène, la jauge de contrainte sera peu couteuse. Elle se présente sous la forme d’un U en papier, sur lequel on vient déposer du graphite à l’aide d’un crayon à papier ceci est très simple à réaliser et sa fabrication ne génère pas d’impact négatif sur l’environnement. A noter aussi que la réponse du capteur va dépendre du type de mine utilisée. 
 
@@ -47,7 +47,7 @@ On retrouve la valeur de résistance du capteur grâce à la formule suivante :
 R=(1+R3/R2)*R1*Vcc/Vadc-R1-R5
 
 
-Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
+Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demandé de multiples essais. 
 Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
 
 Matériel nécessaire
@@ -97,7 +97,12 @@ Pour ce qui est du perçage, dans les consignes, il était dit de prévoir deux 
 
 ## 4) Arduino
 
+Nous avons développé un code Arduino qui permet de récupérer la valeur amplifiée de la résistance du capteur de l’afficher sur l’écran OLED et de l’envoyer au module Bluetooth. De plus, il traite la valeur de la résistance du flex sensor et affiche sa valeur de déformation sur l’écran OLED. La communication avec l'écran OLED se fait grâce à la bibliothèque Adafruit_SSD1306.h. 
+Ce code permet aussi de régler le potentiomètre digital, qui remplace la valeur de R2 dans le circuit électrique. 
+
+
 ## 5) Application Android APK
+
 Nous avons développé une application android à l’aide du développeur MIT App Inventor. Couplée au module Bluetooth HC-05, cette application permet d’afficher en direct la résistance du capteur et l’évolution de la résistance en fonction du temps grâce à  un graphique déroulant.
 
 
