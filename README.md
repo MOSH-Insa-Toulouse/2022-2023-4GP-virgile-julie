@@ -38,6 +38,15 @@ Nous avons débuté notre projet par la fabrication de notre shield pour notre c
 
 ![ ](Images_kicad/ampli_transimpédance.png)
     
+    
+Pour exploiter le signal de sortie du capteur par un convertisseur analogique-numérique d’une carte Arduino, la sortie du capteur est reliée à un circuit amplificateur transimpédance. Ce circuit dispose de trois étages de filtrage : 
+	Un filtre passe-bas R1C1 qui permet de filtrer les bruits en courants sur le signal d’entrée
+	Un filtre passe bas R3C4 couplé à un amplificateur opérationnel LTC1050 permettant de filtrer la composante du bruit à 50 Hz provenant du réseau électrique
+	Un filtre de sortie R5C2 qui coupe les bruits due à l’échantillonnage de l’ADC
+On retrouve la valeur de résistance du capteur grâce à la formule suivante : 
+R=(1+R3/R2)*R1*Vcc/Vadc-R1-R5
+
+
 Par la suite, nous avons ensuite imprimé notre circuit PCB après validation de celle-ci, qui aura demande de multiples essais. 
 Puis, nous avons réalisé le montage des composants sur la carte vierge avec le matériel ci-dessous.
 
@@ -87,3 +96,12 @@ Lorsque le PCB a été fabriqué, il nous reste l'étape d'assemblage du shield.
 Pour ce qui est du perçage, dans les consignes, il était dit de prévoir deux tailles de trous sur le Kicad, soit un de diamètre 0,8mm pour les composants et headers et un de diamètre 1mm pour les broches de connexion de la carte Arduino Uno.
 
 ## 4) Arduino
+
+## 6) Banc de test 
+
+Un banc de test présentant différents arcs de cercle de différents diamètres a été utilisé pour les mesures de caractéristiques électriques. Le but est de mesurer la variation de résistance entre le capteur « à plat » et le capteur courbé sur les arcs de cercle. 
+En désignant r le rayon du cercle et e l’épaisseur du banc de test, on calcule la déformation de chaque arc de cercle à partir de cette formule : ε = e / 2r 
+
+
+![bancdetest](https://github.com/MOSH-Insa-Toulouse/2022-2023-4GP-virgile-julie/assets/123975087/364b97e4-43ff-4bdd-b029-aae2df5c6a04)
+
